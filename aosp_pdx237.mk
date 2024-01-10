@@ -22,24 +22,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 IS_PHONE := true
 
-PRODUCT_NAME := lineage_pdx234
-PRODUCT_DEVICE := pdx234
+PRODUCT_NAME := aosp_pdx237
+PRODUCT_DEVICE := pdx237
 PRODUCT_MANUFACTURER := Sony
 PRODUCT_BRAND := Sony
-PRODUCT_MODEL := XQ-DQ72
+PRODUCT_MODEL := XQ-DE54
 
-PRODUCT_SYSTEM_NAME := XQ-DQ72
-PRODUCT_SYSTEM_DEVICE := XQ-DQ72
+PRODUCT_SYSTEM_NAME := XQ-DE54
+PRODUCT_SYSTEM_DEVICE := XQ-DE54
 
 PRODUCT_GMS_CLIENTID_BASE := android-sonymobile
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=$(PRODUCT_SYSTEM_DEVICE) \
     TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME) \
-    PRIVATE_BUILD_DESC="XQ-DQ72-user 14 67.1.A.2.112 067001A002011200521143226 release-keys"
+    PRIVATE_BUILD_DESC="XQ-DE54_EEA-user 14 67.1.A.2.182 067001A002018200523109309 release-keys"
 
-BUILD_FINGERPRINT := Sony/XQ-DQ72/XQ-DQ72:14/67.1.A.2.112/067001A002011200521143226:user/release-keys
+BUILD_FINGERPRINT := Sony/XQ-DE54_EEA/XQ-DE54:14/67.1.A.2.18/067001A002018200523109309:user/release-keys

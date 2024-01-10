@@ -27,7 +27,7 @@ $(call inherit-product, device/sony/sm8550-common/common.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2560
-TARGET_SCREEN_WIDTH := 1440
+TARGET_SCREEN_WIDTH := 1080
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
@@ -39,16 +39,16 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    SonyPDX234SystemUIRes \
-    SonyPDX234NfcNciRes \
-    SonyPDX234FrameworksRes
+    SonyPDX237SystemUIRes \
+    SonyPDX237NfcNciRes \
+    SonyPDX237FrameworksRes
 
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-aosp
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/sony/pdx234/pdx234-vendor.mk)
+$(call inherit-product, vendor/sony/pdx237/pdx237-vendor.mk)
