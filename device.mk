@@ -25,6 +25,9 @@
 # Inherit from sony sm8550-common
 $(call inherit-product, device/sony/sm8550-common/common.mk)
 
+# Inherit from sony extra
+$(call inherit-product, device/sony/extra/extra.mk)
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2520
 TARGET_SCREEN_WIDTH := 1080
