@@ -17,6 +17,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
+    'hardware/qcom-caf/common/libqti-perfd-client',
     'hardware/qcom-caf/sm8550',
     'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/sony/sm8550-common',
