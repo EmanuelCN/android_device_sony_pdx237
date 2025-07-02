@@ -19,6 +19,7 @@ from extract_utils.fixups_blob import (
 from extract_utils.module import lib_fixups_user_type
 
 namespace_imports = [
+    'hardware/qcom-caf/common/libqti-perfd-client',
     'hardware/qcom-caf/sm8550',
     'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/sony/sm8550-common',
