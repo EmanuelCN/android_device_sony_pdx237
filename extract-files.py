@@ -1,7 +1,6 @@
 #!/usr/bin/env -S PYTHONPATH=../../../tools/extract-utils python3
 #
-# Copyright (C) 2024 The LineageOS Project
-#
+# SPDX-FileCopyrightText: 2024 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -10,9 +9,7 @@ from extract_utils.fixups_blob import (
     blob_fixups_user_type,
 )
 from extract_utils.fixups_lib import (
-    lib_fixup_remove,
     lib_fixups,
-    lib_fixups_user_type,
 )
 from extract_utils.main import (
     ExtractUtils,
@@ -25,19 +22,15 @@ namespace_imports = [
     'vendor/sony/sm8550-common',
 ]
 
+
 blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libarcsoft_hdr_adapter.so': blob_fixup()
-    .add_needed(
-        'liblog.so',
-    )
-    .add_needed(
-        'libcutils.so',
-    ),
-}
+        .add_needed('liblog.so')
+        .add_needed('libcutils.so'),
+    'vendor/lib64/libcammw.so': blob_fixup()
+        .replace_needed('android.hardware.light-V1-ndk_platform.so', 'android.hardware.light-V1-ndk.so'),
 
-lib_fixups: lib_fixups_user_type = {
-    **lib_fixups,
-}
+}  # fmt: skip
 
 module = ExtractUtilsModule(
     'pdx237',
