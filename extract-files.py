@@ -20,6 +20,7 @@ namespace_imports = [
     'hardware/qcom-caf/sm8550',
     'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/sony/sm8550-common',
+    'vendor/qcom/common/vendor/adreno/t',
 ]
 
 
